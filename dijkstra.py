@@ -43,3 +43,5 @@ def dijkstra(graph, departure, destination):
 
 
 dijkstra(g, 'A', 'F')
+# 10
+# ['A', 'C', 'E', 'F']
