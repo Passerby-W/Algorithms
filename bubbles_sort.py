@@ -19,8 +19,29 @@ def bubble_sort(array):
     print(array)
 
 
+def better_bubble_sort(array):
+    n = len(array)
+
+    # 遍历所有数组元素
+    for i in range(n):
+        swap = False
+
+        # Last i elements are already in place
+        for j in range(0, n - i - 1):
+
+            if array[j] > array[j + 1]:
+                array[j], array[j + 1] = array[j + 1], array[j]
+                swap = True
+
+        if not swap:
+            break
+    print(array)
+
+
 arr = [64, 34, 25, 12, 22, 11, 90]
 bubble_sort(arr)
+better_bubble_sort(arr)
+# [11, 12, 22, 25, 34, 64, 90]
 # [11, 12, 22, 25, 34, 64, 90]
 
 
